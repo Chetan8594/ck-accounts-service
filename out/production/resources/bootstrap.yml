@@ -1,0 +1,33 @@
+server:
+  port: 8594
+
+
+spring:
+  application:
+    name: accounts-service
+  cloud:
+    config:
+      uri: http://chetan:config@localhost:8888/config
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    registry-fetch-interval-seconds: 15
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 10
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"
+  endpoint:
+    health:
+      show-details: always
