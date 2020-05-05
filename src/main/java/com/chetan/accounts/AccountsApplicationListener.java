@@ -3,7 +3,7 @@ package com.chetan.accounts;
 
 import com.chetan.accounts.domain.Account;
 import com.chetan.accounts.model.AccountsList;
-import com.chetan.accounts.repository.AccountRepository;
+import com.chetan.accounts.repository.AccountsRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
@@ -23,7 +23,7 @@ public class AccountsApplicationListener implements ApplicationListener<Applicat
 
 
     @Autowired
-    AccountRepository accountRepository;
+    AccountsRepository accountsRepository;
 
     @Autowired
     protected ObjectMapper objectMapper;
@@ -34,9 +34,9 @@ public class AccountsApplicationListener implements ApplicationListener<Applicat
     }
 
     public void createAccounts() {
-        accountRepository.deleteAll()
+        accountsRepository.deleteAll()
                 .thenMany(Flux.fromIterable(accounts())
-                        .flatMap(accountRepository::save)
+                        .flatMap(accountsRepository::save)
                         .doOnNext(account -> {
                             log.info("Account added in MongoDB: {}",account);
                         })).blockLast();
