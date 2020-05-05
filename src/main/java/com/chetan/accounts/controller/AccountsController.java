@@ -46,10 +46,4 @@ public class AccountsController {
         return accountsService.deleteAccount(id);
     }
 
-    @GetMapping("/v1/mockAccounts")
-    public ResponseEntity createAccounts(){
-          accountsService.createAccounts();
-          return new ResponseEntity(HttpStatus.OK);
-    }
-
 }

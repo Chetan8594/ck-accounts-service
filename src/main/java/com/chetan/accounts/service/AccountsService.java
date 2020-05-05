@@ -6,8 +6,6 @@ import reactor.core.publisher.Mono;
 
 public interface AccountsService {
 
-    void createAccounts();
-
     Mono<Account> createAccount(Account account);
 
     Mono<Account> updateAccount(Integer id,Account account);

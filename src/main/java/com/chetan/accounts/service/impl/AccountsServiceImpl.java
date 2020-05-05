@@ -21,19 +21,6 @@ public class AccountsServiceImpl implements AccountsService {
     @Autowired
     AccountRepository accountRepository;
 
-    @Autowired
-    protected ObjectMapper objectMapper;
-
-    @Override
-    public void createAccounts() {
-        accountRepository.deleteAll()
-                        .thenMany(Flux.fromIterable(accounts())
-                        .flatMap(accountRepository::save)
-                        .doOnNext(account -> {
-                                         log.info("Account added in MongoDB: {}",account);
-                                     })).blockLast();
-    }
-
     @Override
     public Flux<Account> getAllAccounts() {
         return accountRepository.findAll();
@@ -62,12 +49,4 @@ public class AccountsServiceImpl implements AccountsService {
         return accountRepository.deleteById(id);
     }
 
-    private List<Account> accounts(){
-        try {
-            String jsonString = IOUtils.toString(this.getClass().getResourceAsStream("/accounts.json"), "UTF-8");
-            return objectMapper.readValue(jsonString, AccountsList.class).getAccounts();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
 }
