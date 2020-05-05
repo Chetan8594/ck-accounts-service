@@ -1,0 +1,86 @@
+{
+    "accounts": [
+        {
+            "accountNumber": "5591775",
+            "accountType": "CHECKING",
+            "accountTypeDescription": "CK REAL ESTATE CORP CHK",
+            "accountNickname": "CK-CHK",
+            "accountStatus": "OPEN",
+            "accountOpenDate": "2010-01-12 00:00:00.0",
+            "baseCurrencyValue": "USD",
+            "externalAccount": false,
+            "availableBalance": 365915.29
+        },
+        {
+            "accountNumber": "559176",
+            "accountType": "SAVINGS",
+            "accountTypeDescription": "CK REAL ESTATE CORP SAV",
+            "accountNickname": "CK-SAV",
+            "accountStatus": "OPEN",
+            "accountOpenDate": "2013-01-12 00:00:00.0",
+            "baseCurrencyValue": "USD",
+            "externalAccount": false,
+            "availableBalance": 705915.29,
+            "interestPercentage": 1.00
+        },
+        {
+            "accountNumber": "5591778",
+            "accountType": "CREDIT",
+            "accountTypeDescription": "CK REAL ESTATE CORP CREDIT",
+            "accountNickname": "CK-CARD",
+            "accountStatus": "OPEN",
+            "accountOpenDate": "2018-01-12 00:00:00.0",
+            "baseCurrencyValue": "USD",
+            "externalAccount": false,
+            "availableBalance": 3169.00,
+            "currentBalance": 16831.00,
+            "paymentDueDate": "2020-05-25 00:00:00.0",
+            "totalMinimumPaymentDue": 0.00,
+            "nextClosingDate": "2020-05-28 00:00:00.0",
+            "interestPercentage": 3.24,
+            "cashBackPercentage": 3,
+            "availableCashBackBalance": 121.21
+        },
+        {
+            "accountNumber": "5591779",
+            "accountType": "CHECKING",
+            "accountTypeDescription": "Sky Deck IT INC CHK",
+            "accountNickname": "SKY-CHK",
+            "accountStatus": "OPEN",
+            "accountOpenDate": "2015-01-12 00:00:00.0",
+            "baseCurrencyValue": "USD",
+            "externalAccount": false,
+            "availableBalance": 58915.89
+        },
+        {
+            "accountNumber": "5591710",
+            "accountType": "SAVINGS",
+            "accountTypeDescription": "Help Need Org - SAV",
+            "accountNickname": "HNO-SAV",
+            "accountStatus": "OPEN",
+            "accountOpenDate": "2019-01-12 00:00:00.0",
+            "baseCurrencyValue": "USD",
+            "externalAccount": false,
+            "availableBalance": 543985.00,
+            "interestPercentage": 1.00
+        },
+        {
+            "accountNumber": "55917711",
+            "accountType": "CREDIT",
+            "accountTypeDescription": "SS REAL ESTATE CORP CREDIT",
+            "accountNickname": "SS-CARD",
+            "accountStatus": "OPEN",
+            "accountOpenDate": "2018-01-12 00:00:00.0",
+            "baseCurrencyValue": "USD",
+            "externalAccount": false,
+            "availableBalance": 15432.00,
+            "currentBalance": 1985.00,
+            "paymentDueDate": "2020-05-25 00:00:00.0",
+            "totalMinimumPaymentDue": 0.00,
+            "nextClosingDate": "2020-05-28 00:00:00.0",
+            "interestPercentage": 2.24,
+            "cashBackPercentage": 5,
+            "availableCashBackBalance": 548.21
+        }
+    ]
+}
