@@ -17,13 +17,13 @@ public class AccountsServiceImpl implements AccountsService {
     AccountsRepository accountsRepository;
 
     @Override
-    public Flux<Account> getAllAccounts() {
-        return accountsRepository.findAll();
+    public Flux<Account> getAllUserAccounts(String userId) {
+        return accountsRepository.findByUserId(userId);
     }
 
     @Override
-    public Mono<Account> getAccount(Integer id) {
-        return accountsRepository.findById(id);
+    public Mono<Account> getUserAccount(String userId, Integer accountNumber) {
+        return accountsRepository.findByUserIdAndAccountNumber(userId, accountNumber);
     }
 
     @Override
@@ -32,16 +32,16 @@ public class AccountsServiceImpl implements AccountsService {
     }
 
     @Override
-    public Mono<Account> updateAccount(Integer id, Account account) {
-        return accountsRepository.findById(id).flatMap(currentAccount -> {
+    public Mono<Account> updateAccount(String userId, Integer accountNumber, Account account) {
+        return accountsRepository.findByUserIdAndAccountNumber(userId, accountNumber).flatMap(currentAccount -> {
             currentAccount.setAvailableBalance(account.getAvailableBalance());
             return accountsRepository.save(currentAccount);
         });
     }
 
     @Override
-    public Mono<Void> deleteAccount(Integer id) {
-        return accountsRepository.deleteById(id);
+    public Mono<Void> deleteAccount(String userId, Integer accountNumber) {
+        return accountsRepository.deleteByUserIdAndAccountNumber(userId, accountNumber);
     }
 
 }

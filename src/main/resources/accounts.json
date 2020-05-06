@@ -1,6 +1,7 @@
 {
     "accounts": [
         {
+            "userId": "CHETAN",
             "accountNumber": "5591775",
             "accountType": "CHECKING",
             "accountTypeDescription": "CK REAL ESTATE CORP CHK",
@@ -12,6 +13,7 @@
             "availableBalance": 365915.29
         },
         {
+            "userId": "CHETAN",
             "accountNumber": "559176",
             "accountType": "SAVINGS",
             "accountTypeDescription": "CK REAL ESTATE CORP SAV",
@@ -24,6 +26,7 @@
             "interestPercentage": 1.00
         },
         {
+            "userId": "CHETAN",
             "accountNumber": "5591778",
             "accountType": "CREDIT",
             "accountTypeDescription": "CK REAL ESTATE CORP CREDIT",
@@ -42,6 +45,7 @@
             "availableCashBackBalance": 121.21
         },
         {
+            "userId": "SARA",
             "accountNumber": "5591779",
             "accountType": "CHECKING",
             "accountTypeDescription": "Sky Deck IT INC CHK",
@@ -53,6 +57,7 @@
             "availableBalance": 58915.89
         },
         {
+            "userId": "SARA",
             "accountNumber": "5591710",
             "accountType": "SAVINGS",
             "accountTypeDescription": "Help Need Org - SAV",
@@ -65,6 +70,7 @@
             "interestPercentage": 1.00
         },
         {
+            "userId": "SARA",
             "accountNumber": "55917711",
             "accountType": "CREDIT",
             "accountTypeDescription": "SS REAL ESTATE CORP CREDIT",

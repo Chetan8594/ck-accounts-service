@@ -16,6 +16,7 @@ public class Account  {
 
     @Id
     private Integer accountNumber;
+    private String userId;
     private String accountType;
     private String accountTypeDescription;
     private String accountNickname;

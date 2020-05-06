@@ -8,11 +8,11 @@ public interface AccountsService {
 
     Mono<Account> createAccount(Account account);
 
-    Mono<Account> updateAccount(Integer id,Account account);
+    Mono<Account> updateAccount(String userId, Integer accountNumber,Account account);
 
-    Flux<Account> getAllAccounts();
+    Flux<Account> getAllUserAccounts(String userId);
 
-    Mono<Account> getAccount(Integer id);
+    Mono<Account> getUserAccount(String userId, Integer accountNumber);
 
-    Mono<Void> deleteAccount(Integer id);
+    Mono<Void> deleteAccount(String userId, Integer accountNumber);
 }
